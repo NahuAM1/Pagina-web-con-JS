@@ -1,0 +1,368 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+    scroll-behavior: smooth; /**Esto es para q al apretar una opcion se desplace lento*/
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+
+header{
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(47, 208, 208, 0.5) 0%, rgba(51, 8, 104, 0.5) 100%), url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50;
+}
+
+.head{
+    padding: 0;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: column;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+.menu{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: #fff;
+    width: 35px;
+    height: 35px;
+    cursor: pointer; /**esto es para q cuando el cursor este arriba se pongal a manito*/
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.menu-navegacion{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 30vw;
+    height: 100%;
+    background-image: linear-gradient(to top, #30cfd0 0%, #08675f 100%);
+    display: flex;
+    flex-direction: column; /** Esto es para que los elementos del menu se pongan uno abajo del otro*/
+    justify-content: space-evenly; /** Esto es para que los elementos del menu se separen equitativamente el espacio vertical del box*/
+    align-items: center;
+    /* transition: transform .3s ease-in-out; */
+    transform: translate(110%);
+    box-shadow: 0, 0, 6px rgba(0, 0, 0, 0.5);
+}
+
+.spread{
+    transform: translate(0);
+}
+
+.menu-navegacion{
+    color: #fff;
+    text-decoration: none;
+}
+
+.titulo{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.copy{
+    font-weight: 300;
+    font-size: 25px;
+
+}
+
+
+/*  Mi historia  */
+
+.subtitulo{
+    text-align: center;
+    font-weight: 300;
+    color: #765c96;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+.contenedor-historia{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-historia img{
+    width: 40%;
+}
+
+.checklist-historia{
+    width: 45%;
+}
+
+.service{
+    margin-bottom: 20px;
+}
+
+.n-service{
+    margin-bottom: 7px;
+    color: #765c96;
+}
+
+.number{
+    display: inline-block;
+    background-image: linear-gradient(to top, #2fd0d0 0%, #330868 100%);
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 30px;
+    margin-right: 5px;
+}
+
+.gallery{
+    background: #f2f2f2;
+}
+
+.contenedor-galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.img-galeria{
+    object-fit: cover;
+    width: 30%;
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.imagen-light{
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);
+    transition: transform .2s ease-in-out;
+}
+
+.show{
+    transform: translate(0);
+}
+
+.agregar-imagen{
+    object-fit: scale-down;
+    width: 60%;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform .3s .2s;
+
+}
+
+.show-image{
+    transform: scale(1);
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.services{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.cont-services{
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.cont-services img{
+    width: 80%;
+    display: block;
+    margin: auto;
+
+}
+
+.n-services{
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 400;
+}
+
+/*  Footer  */
+
+footer{
+    background: #765c96;
+    padding-bottom: 0.1px;  /**Esto es para evitar el colapsado de margenes*/
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.contact-us{
+    width: 40%;
+    color: #fff;
+
+}
+
+.brand{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.brand+p{
+    font-weight: 500;
+}
+
+.social-media{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media-icon{
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solidrgba(255, 255, 255, 0);
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+}
+
+.social-media-icon:hover{
+    background: #fff;
+    color: #765c96;
+}
+
+.social-media-icon i{
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.line{
+    width: 90%;
+    min-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width:800px){
+    .menu-navegacion{
+        width: 50vw;
+    }
+    .titulo{
+        font-size: 40px;
+    }
+    .contenedor-historia{
+        width: 80%;
+        margin-bottom: 40px;
+    }
+    .checklist-historia{
+        width: 80%;
+    }
+    .service{
+        margin-bottom: 30px;
+    }
+    .agregar-imagen{
+        width: 80%;
+    }
+    .img-galeria{
+        width: 45%;
+    }
+    .cont-services{
+        width: 80%;
+    }
+    .social-media-icon{
+        margin-left: 0;
+    }
+    .social-media{
+        width: 80%;
+        justify-content: space-evenly;
+    }
+    .social-media i{
+        margin-left: 0;
+    }
+    .footer-content{
+        justify-content: center;
+    }
+    .contact-us{
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+
+}
+@media screen and (max-width:500px){
+    .menu-navegacion{
+        width: 65vw;
+    }
+    .menu{
+        top: 20px;
+        right: 20px;
+    }
+    .titulo{
+        font-size: 30px;
+    }
+    .subtitulo{
+        font-size: 30px;
+    }
+    .agregar-imagen{
+        width: 95%;
+    }
+    .img-galeria{
+        width: 95%;
+    }
+    .social-media{
+        width: 100%;
+    }
+    .contact-us{
+        width: 90%;
+    }
+}
